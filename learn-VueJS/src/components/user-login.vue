@@ -5,6 +5,7 @@
       <user-name ref="uname" placeholder="请输入用户名"></user-name>
       <user-pass placeholder="请输入密码"></user-pass>
       <user-area></user-area>
+      <user-favs></user-favs>
       <user-submit></user-submit>
     </form>
   </div>
@@ -13,6 +14,7 @@
   import username from './user/user-name';
   import userpass from './user/user-pass';
   import userarea from './user/user-area';
+  import userfavs from './user/user-favs';
   import usersubmit from './user/user-submit';
 
   export default {
@@ -36,6 +38,7 @@
       'user-name': username,
       'user-pass': userpass,
       'user-area': userarea,
+      'user-favs': userfavs,
       'user-submit': usersubmit
     }
   }
