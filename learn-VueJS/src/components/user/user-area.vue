@@ -22,7 +22,7 @@
     },
     methods: {
       selectedChange() {
-        this.$emit('childChang', 'userarea', this.selectedIndex);
+        this.$emit('childChange', 'userarea', this.selectedIndex);
       }
     }
   }

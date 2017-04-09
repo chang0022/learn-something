@@ -2,9 +2,9 @@
   <div id="user-login" class="col-md-8 col-md-offset-2">
     <h2 class="text-center">用户登录</h2>
     <form class="form-horizontal">
-      <user-name ref="uname" placeholder="请输入用户名" @updateUserName="setUserName"></user-name>
+      <user-name ref="uname" placeholder="请输入用户名"></user-name>
       <user-pass placeholder="请输入密码"></user-pass>
-      <user-area @childChange="setValue"></user-area>
+      <user-area></user-area>
       <user-submit></user-submit>
     </form>
   </div>
@@ -23,12 +23,14 @@
       }
     },
     methods: {
-      setUserName(uname) {
-        this.username = uname;
-      },
       setValue(key, value) {
         this.$data[key] = value;
       }
+    },
+    mounted() {
+      this.$children.forEach(function (cc) {
+        cc.$on('childChange', this.setValue);
+      }.bind(this));
     },
     components: {
       'user-name': username,

@@ -13,13 +13,13 @@
     props: ['placeholder'],
     data() {
       return {
-          username: 'Neo'
+        username: 'Neo'
       }
     },
     methods: {
-        userNameChange() {
-            this.$emit('updateUserName', this.username);
-        }
+      userNameChange() {
+        this.$emit('childChange', 'username', this.username);
+      }
     }
   }
 </script>
