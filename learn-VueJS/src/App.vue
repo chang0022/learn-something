@@ -1,13 +1,19 @@
 <template>
   <div id="app">
+    <page-nav></page-nav>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import pagenav from './components/page-nav'
+
+  export default {
+    name: 'app',
+    components: {
+      'page-nav': pagenav
+    }
+  }
 </script>
 
 <style>
@@ -15,6 +21,5 @@ export default {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    margin-top: 60px;
   }
 </style>
