@@ -3,6 +3,7 @@
     <div class="row">
       <div class="page-header">
         <h2>{{newsDetail.title}}</h2>
+        <h3></h3>
         <small>{{newsDetail.pubtime}}</small>
         <p>{{newsDetail.desc}}</p>
       </div>
