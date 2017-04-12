@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-12" v-for="news in newsList">
         <h2>
-          <router-link :to="{name: 'newsDetail', params:{newsId: news.newsId}}">{{news.title}}</router-link>
+          <router-link :to="{name: 'newsDetail', params:{newsId: news.newsid}}">{{news.title}}</router-link>
           <small>{{news.pubtiem}}</small>
         </h2>
         <p>{{news.desc}}</p>
