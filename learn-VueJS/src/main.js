@@ -6,12 +6,14 @@ import router from './router'
 import axios from 'axios'
 import Vuex from 'vuex'
 
-import mock from './api/mock'
+import mock from '@/api/mock'
+import validate from '@/plugins/validate'
 
 Vue.config.productionTip = false
 
-Vue.use(Vuex)
 Vue.prototype.$http = axios
+Vue.use(Vuex)
+Vue.use(validate)
 
 /* eslint-disable no-new */
 new Vue({

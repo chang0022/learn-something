@@ -4,7 +4,7 @@
 import Mock from 'mockjs'
 
 Mock.mock(/\/api\/news\/detail(\?newsId=\d+)?/, {
-  'title'     : '@name',
+  'title'     : '@cname',
   'pubtime': '@datetime',
-  'desc'    : '@paragraph'
+  'desc'    : '@cparagraph'
 });
