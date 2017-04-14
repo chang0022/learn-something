@@ -9,7 +9,8 @@
   export default {
     methods: {
       test() {
-        alert(this.$parent.$refs.uname.$data.username + '===' + this.$parent.$data.userarea);
+//        alert(this.$parent.$refs.uname.$data.username + '===' + this.$parent.$data.userarea);
+        this.$store.commit('showUserName');
       }
     }
   }

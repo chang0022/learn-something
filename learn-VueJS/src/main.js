@@ -7,17 +7,28 @@ import axios from 'axios'
 import Vuex from 'vuex'
 
 import mock from '@/api/mock'
-import validate from '@/plugins/validate'
+// import validate from '@/plugins/validate'
 
 Vue.config.productionTip = false
 
 Vue.prototype.$http = axios
 Vue.use(Vuex)
-Vue.use(validate)
+// Vue.use(validate)
 
+const store = new Vuex.Store({
+  state: {
+    userName: ''
+  },
+  mutations: {
+    showUserName(state) {
+      alert(state.userName);
+    }
+  }
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store: store,
   router,
   template: '<App/>',
   components: { App }
