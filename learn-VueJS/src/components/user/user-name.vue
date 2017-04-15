@@ -17,7 +17,7 @@
     methods: {
       userNameChange() {
 //        this.$emit('childChange', 'username', this.username);
-        this.$store.state.userName = this.username;
+        this.$store.state.user.userName = this.username;
       }
     }
   }

@@ -14,9 +14,11 @@
       <div class="collapse navbar-collapse" id="collapse">
         <ul class="nav navbar-nav">
           <li class="active">
-            <a href="javascript:;">Link <span class="sr-only">(current)</span></a>
+            <router-link :to="{name: 'Login'}">Index <span class="sr-only">(current)</span></router-link>
           </li>
-          <li><a href="javascript:;">Link</a></li>
+          <li>
+            <router-link :to="{name: 'News'}">News</router-link>
+          </li>
         </ul>
         <form class="navbar-form navbar-left">
           <div class="form-group">

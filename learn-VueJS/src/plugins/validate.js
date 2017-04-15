@@ -5,7 +5,7 @@ export default {
   install(Vue) {
 
     Vue.component('validate-text', {
-      template: '<div><input type="text"  v-model="textValue"  class="form-control" :placeholder="placeholder"><span v-if="showErrorLabel" class="label label-danger">用户名不合法</span></div>',
+      template: '<div><input type="text" v-model="textValue" class="form-control" :placeholder="placeholder"><span v-if="showErrorLabel" class="label label-danger">用户名不合法</span></div>',
       data() {
         return {
           textValue: ''

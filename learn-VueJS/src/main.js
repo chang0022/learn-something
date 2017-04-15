@@ -9,6 +9,9 @@ import Vuex from 'vuex'
 import mock from '@/api/mock'
 // import validate from '@/plugins/validate'
 
+import UserModule from '@/store/modules/UserModule'
+import NewsModule from '@/store/modules/NewsModule'
+
 Vue.config.productionTip = false
 
 Vue.prototype.$http = axios
@@ -16,13 +19,9 @@ Vue.use(Vuex)
 // Vue.use(validate)
 
 const store = new Vuex.Store({
-  state: {
-    userName: ''
-  },
-  mutations: {
-    showUserName(state) {
-      alert(state.userName);
-    }
+  modules: {
+    user: UserModule,
+    news: NewsModule
   }
 })
 /* eslint-disable no-new */
@@ -31,5 +30,5 @@ new Vue({
   store: store,
   router,
   template: '<App/>',
-  components: { App }
+  components: {App}
 })

@@ -1,10 +1,10 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12" v-for="news in newsList">
+      <div class="col-md-12" v-for="news in this.$store.getters.getNews">
         <h2>
           <router-link :to="{name: 'newsDetail', params:{newsId: news.newsid}}">{{news.title}}</router-link>
-          <small>{{news.pubtiem}}</small>
+          <small>{{news.pubtime}}</small>
         </h2>
         <p>{{news.desc}}</p>
       </div>
@@ -13,14 +13,14 @@
 </template>
 <script>
   export default {
-    data() {
-      return {
-        newsList:[
-          {newsid:'101', pubtime: '2017-04-07', title: '探索之路', desc:'是手机团队的探索之路'},
-          {newsid:'102', pubtime: '2017-04-08', title: '系统之战', desc:'如何支持业务解决'},
-          {newsid:'103', pubtime: '2017-04-09', title: '大文件存储', desc:'背后的你不得不知的技术'},
-          {newsid:'104', pubtime: '2017-04-10', title: '飞天进化', desc:'"阿里巴巴技术委员会'}
-        ]
+    created() {
+      if (this.$store.state.news.newsList.length === 0) {
+        this.$http.get('/api/news/lists')
+          .then(res => {
+            this.$store.state.news.newsList = res.data.array;
+          }, res => {
+            console.log(res);
+          })
       }
     }
   }
