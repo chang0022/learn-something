@@ -13,11 +13,23 @@ Mock.mock(/\/api\/news\/detail(\?newsId=\d+)?/, {
 
 Mock.mock(/\/api\/news\/lists/, {
   'array|5-10': [
-    {'newsid': '@integer(1, 100)', 'pubtime': '@datetime', 'title': '@ctitle', 'desc': '@csentence', 'isDeleted': '@boolean'}
+    {
+      'newsid': '@integer(1, 100)',
+      'pubtime': '@datetime',
+      'title': '@ctitle',
+      'desc': '@csentence',
+      'isDeleted': '@boolean'
+    }
   ]
 });
 
 Mock.mock(/\/api\/news\/agree/, 'post', {
   'status': 'success',
   'agree': '@integer(100, 200)'
+});
+
+Mock.mock(/\/api\/news\/table/, {
+  'array|5-10': [
+    {'date': '@datetime', 'name': '@cname', 'address': '@county(true)'}
+  ]
 });

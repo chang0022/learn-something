@@ -6,7 +6,8 @@ import axios from 'axios'
 export default {
   state: {
     newsList: [],
-    newsDetail: []
+    newsDetail: [],
+    newsTable: []
   },
   mutations: {
     setAgree(state, agree) {

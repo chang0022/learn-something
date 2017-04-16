@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import axios from 'axios'
 import Vuex from 'vuex'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
 
 import mock from '@/api/mock'
 // import validate from '@/plugins/validate'
@@ -16,6 +18,7 @@ Vue.config.productionTip = false
 
 Vue.prototype.$http = axios
 Vue.use(Vuex)
+Vue.use(ElementUI)
 // Vue.use(validate)
 
 const store = new Vuex.Store({
