@@ -13,6 +13,7 @@ import mock from '@/api/mock'
 
 import UserModule from '@/store/modules/UserModule'
 import NewsModule from '@/store/modules/NewsModule'
+import EleModule from '@/store/modules/eleModule'
 
 Vue.config.productionTip = false
 
@@ -24,7 +25,8 @@ Vue.use(ElementUI)
 const store = new Vuex.Store({
   modules: {
     user: UserModule,
-    news: NewsModule
+    news: NewsModule,
+    ele: EleModule
   }
 })
 /* eslint-disable no-new */

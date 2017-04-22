@@ -22,6 +22,9 @@
           <li>
             <router-link :to="{name: 'elTable'}">Table</router-link>
           </li>
+          <li>
+            <router-link :to="{name: 'elIndex'}">Element示例</router-link>
+          </li>
         </ul>
         <form class="navbar-form navbar-left">
           <div class="form-group">
